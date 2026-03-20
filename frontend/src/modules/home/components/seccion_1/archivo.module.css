@@ -1,0 +1,164 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  width: 480px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.header h2 span {
+  color: #6366f1;
+}
+
+.btnCerrar {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.btnCerrar:hover {
+  color: #e53e3e;
+}
+
+/* IZQUIERDA */
+.imagenContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagenPreview {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.btnCambiarImagen {
+  font-size: 0.85rem;
+  color: #6366f1;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campos label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.campos input {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.campos input:focus {
+  border-color: #6366f1;
+}
+
+.campos input:disabled {
+  background: #f7fafc;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.botones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btnCancelar {
+  padding: 8px 20px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #4a5568;
+  transition: background 0.2s;
+}
+
+.btnCancelar:hover {
+  background: #f7fafc;
+}
+
+.btnGuardar {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btnGuardar:hover {
+  background: #4f46e5;
+}
+
+.btnGuardar:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.cargando {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+}
+.contenido {
+  display: flex;
+  gap: 20px;
+}
+/* DERECHA */
+.derecha {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

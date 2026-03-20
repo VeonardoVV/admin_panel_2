@@ -1,0 +1,30 @@
+QUE ES AXIOS 
+
+Es una librería para hacer peticiones HTTP desde tu aplicación React (o cualquier app JavaScript).
+Te permite comunicarte con tu backend, consumir APIs, enviar datos a un servidor, etc.
+Ejemplo básico en React:
+
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/posts/1')
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+  return (
+    <div>
+      {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Cargando...'}
+    </div>
+  );
+}
+
+export default App;
